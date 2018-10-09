@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suite1" parallel="methods" data-provider-thread-count="3">
+    <listeners>
+        <listener class-name="com.epam.lab.listener.TestListener"/>
+    </listeners>
+    <test name="successfulTest">
+        <classes>
+            <class name="com.epam.lab.TestGmail"/>
+        </classes>
+    </test>
+    <test name="failedTest">
+        <classes>
+            <class name="com.epam.lab.TestGmailLogin"/>
+        </classes>
+    </test>
+</suite>
